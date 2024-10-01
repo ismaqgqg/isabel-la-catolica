@@ -1,0 +1,135 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2424;
+  }
+  
+ /* Estilos del menú de navegación */
+nav {
+  background: linear-gradient(to right, #000000, #000000, #441b1b);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  height: 100px;
+  position: relative; /* Añadimos esto para que el menú esté relativo al nav */
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 40px;
+  transition: background-color 0.3s;
+  font-size: x-large;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Estilos para el ícono del menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 1000px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px; /* El menú se despliega justo debajo del nav */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000000;
+    transition: height 0.3s ease; /* Suavizar el despliegue */
+    z-index: 1;
+    height: auto;
+  }
+
+  nav li {
+    margin-left: 0%;
+    margin-top: 10px;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+
+  /* Mostrar el menú cuando esté activado */
+  nav ul.active {
+    display: flex;
+  }
+}
+
+  
+  /* Estilos para las secciones */
+  section {
+    padding: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+
+  }
+  
+  section.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Estilos para productos */
+  .product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px ;
+  }
+  
+  .product h3 {
+    margin: 10;
+  }
+  
+  .price {
+    color: #243528;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position: relative;
+    bottom: 0;
+    width: auto;
+  }
+  
